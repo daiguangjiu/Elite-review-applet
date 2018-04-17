@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/data/data",
+    "pages/mi/mi",
+    "pages/chaopai/chaopai",
+    "pages/details/details",
+    "pages/chaopai_xq/chaopai_xq",
+    "pages/landing/landing",
+    "pages/registered/registered",
+    "pages/reports/reports",
+    "pages/change_password/change_password",
+    "pages/leave/leave",
+    "pages/qr/qr",
+    "pages/fans/fans",
+    "pages/comment/comment",
+    "pages/wonderful/wonderful"
+  ],
+  "window":{
+    "navigationBarTitleText": "精英点评",
+    "backgroundColorBottom": "#cccccc",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "黑精",
+        "iconPath": "images/foot1.jpg",
+        "selectedIconPath": "images/foot11.jpg"
+      },
+      {
+        "pagePath": "pages/wonderful/wonderful",
+        "text": "精彩",
+        "iconPath": "images/foot2.jpg",
+        "selectedIconPath": "images/foot22.jpg"
+      },
+      {
+        "pagePath": "pages/chaopai/chaopai",
+        "text": "潮派",
+        "iconPath": "images/foot3.jpg",
+        "selectedIconPath": "images/foot33.jpg"
+      },
+      {
+        "pagePath": "pages/mi/mi",
+        "text": "我",
+        "iconPath": "images/foot4.jpg",
+        "selectedIconPath": "images/foot44.jpg"
+      }
+    ],
+    "backgroundColor": "#252525",
+    "color": "#d3ad60"
+  }
+}

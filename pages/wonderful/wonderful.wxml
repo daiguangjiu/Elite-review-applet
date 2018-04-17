@@ -1,0 +1,54 @@
+<!-- 头部样式 -->
+<view class="top tong">
+	<picker bindchange="pickChange" value="{{index}}" range="{{array}}" class='pic fl no_p'>
+	  <view>
+	      {{array[index]}}
+	  </view>
+	</picker>
+
+	<input placeholder='输入搜索您想要的内容' type='text' class='a1 fl no_p' placeholder-class="phcolor"></input>
+
+	<view class="view-1 a2 fr">
+	    <icon class = "margin" type="search" size='20' color='#c69e62'/>
+	    <view class="margin"></view>
+	</view>
+</view>
+<view class='top_k'></view>
+<!-- 内容区域开始 -->
+<image src='https://wew.jydianping.com/images/wonderful_top.jpg' class='top_img'></image>
+<!-- 选项卡开始 -->
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">电影</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">游戏</view>
+</view>
+
+  <view class="weui-cells__title index_ul_k" hidden="{{!isShow}}">
+   <view wx:for="{{index_ul}}">
+    <view class='index_ul'>
+      <navigator url='{{item.a}}'><image src='{{item.img}}'></image></navigator>
+      <navigator url='{{item.a}}' class='tong wzjd'>{{item.bt}}</navigator>
+      <view class='tong'>
+      <view class='introduction fl'>{{item.introduction}}</view>
+        <view class='fl like'>{{item.like}}</view>
+        <view class='fl view'>{{item.view}}</view>
+        <button class='fl share' open-type="share">分享</button>
+      </view>
+    </view>
+   </view>
+  </view>
+
+<view class="weui-cells__title index_ul_k" hidden="{{isShow}}">
+   <view wx:for="{{index_ul2}}">
+    <view class='index_ul'>
+      <navigator url='{{item.a}}'><image src='{{item.img}}'></image></navigator>
+      <navigator url='{{item.a}}' class='tong wzjd'>{{item.bt}}</navigator>
+      <view class='tong'>
+      <view class='introduction fl'>{{item.introduction}}</view>
+        <view class='fl like'>{{item.like}}</view>
+        <view class='fl view'>{{item.view}}</view>
+        <button class='fl share' open-type="share">分享</button>
+      </view>
+    </view>
+   </view>
+</view>
+<!-- 选项卡结束 -->

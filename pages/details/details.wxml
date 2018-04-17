@@ -1,0 +1,73 @@
+<scroll-view scroll-y scroll-with-animation='true' scroll-top='{{ topNum }}'>
+<!-- 头部样式 -->
+<view class="top tong">
+	<picker bindchange="pickChange" value="{{index}}" range="{{array}}" class='pic fl no_p'>
+	  <view>
+	      {{array[index]}}
+	  </view>
+	</picker>
+
+	<input placeholder='输入搜索您想要的内容' type='text' class='a1 fl no_p' placeholder-class="phcolor"></input>
+
+	<view class="view-1 a2 fr">
+	    <icon class = "margin" type="search" size='20' color='#c69e62'/>
+	    <view class="margin"></view>
+	</view>
+</view>
+<view class='top_k'></view>
+<!-- 详情 -->
+<view class='tong details_k'>
+  <view class='bt'>{{bt}}</view>
+  <view class='bt_f'>
+    {{bt_f1}}
+    {{bt_f2}}
+    {{bt_f3}}
+  </view>
+  <!-- 富文本编辑区域 -->
+  <view class='details'>
+    <import src="../../wxParse/wxParse.wxml"/>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <!-- 点赞 -->
+  <view class='like'>243</view>
+  <view class='ov fx_k'>
+    <view class='a1 fl'>2353</view>
+    <button class='fl share' open-type="share">分享</button>
+  </view>
+</view>
+<!-- 灰色间隔 -->
+<view class='hui'></view>
+<!-- 用户评论 -->
+<view class='tong'>
+  <view class='comment_bt'>用户评论</view>
+  <!-- 评论列表 -->
+  <view wx:for="{{comment_ul}}" class='comment_k'>
+      <image src="{{item.image}}"></image>
+      <view class='names'>{{item.names}}</view>
+      <view class='time'>{{item.time}}</view>
+      <view class='content'>{{item.content}}</view>
+  </view>
+</view>
+<view class='no_comment'>没有更多评论</view>
+<!-- <view class='no_comment'>还没有评论，沙发等你来抢！</view> -->
+<!-- 发表评论 -->
+<view class='publish tong'>
+  <input type='text' placeholder='期待您的点评' class='fl'></input>
+  <button form-type='submit' class='fr'>发送</button>
+</view>
+<view class='publish_k'></view>
+
+</scroll-view>
+<!-- 返回顶部 -->
+<view class='ding' catchtap='returnTop'></view>
+
+
+
+
+
+
+
+
+
+
+

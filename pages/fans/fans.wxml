@@ -1,0 +1,11 @@
+<!-- 头部样式 -->
+<view class='fans_top'>粉丝数：<view>{{fans_top}}</view></view>
+<view class='fans_bt'>我的团队</view>
+
+<view wx:for="{{fans_ul}}" class='ov fans_ul'>
+  <image src='{{item.image}}' class='fl'></image>
+  <view class='a1 fl'>{{item.id}}</view>
+  <view class='fr'>{{item.itme}}关注</view>
+</view>
+
+
